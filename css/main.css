@@ -44,10 +44,15 @@ p {
 	font-size: 20px;
 	color: black;
 }
-#aboutSide {
+#aboutSideHome {
 	margin: 0;
 	padding: 0;
 	width: 100%;
+}
+#aboutSide {
+	margin-top: 50px;
+	border-color: black;
+	width: 10%;
 }
 #icons {
 	width: 15px;
@@ -87,7 +92,6 @@ p {
 	padding-right: 100px;
 }
 hr {
-	font-family: "Ubuntu";
 	margin-top: 50px;
 	border-color: black;
 	width: 25%;
@@ -95,4 +99,7 @@ hr {
 a {
 	font-family: "Ubuntu";
 	text-decoration: none;
-}		
+}	
+li {
+	font-family: "Ubuntu";
+}	
