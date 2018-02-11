@@ -1,0 +1,98 @@
+@font-face {
+	font-family: "Ubuntu";
+	src: url("../fonts/ubuntu-regular.ttf");
+}
+h1 {
+	font-family: "Ubuntu";
+	padding-top: 50px;
+	font-size: 100px;
+	color: white;
+}
+p {
+	font-family: "Ubuntu";
+	font-size: 30px;
+	color: white;
+}
+#about {
+	font-family: "Ubuntu";
+	padding: 50px 0 10px 0;
+	font-size: 30px;
+	color: black;
+}
+#aboutContent {
+	font-family: "Ubuntu";
+	color: black;
+	font-size: 20px;
+}
+#aboutContentLink {
+	font-family: "Ubuntu";
+	color: black;
+	font-size: 18px;
+}
+#blogTitle {
+	font-family: "Ubuntu";
+	font-size: 30px;
+	padding: 50px 0 0px 0;
+}
+#blogCap{
+	font-family: "Ubuntu";
+	color: black;
+	font-size: 15px;
+}
+#blogContent {
+	font-family: "Ubuntu";
+	font-size: 20px;
+	color: black;
+}
+#aboutSide {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#icons {
+	width: 15px;
+	height: 15px;
+}
+#otherPGHead {
+	font-family: "Ubuntu";
+	padding-top: 50px;
+	font-size: 100px;
+	color: black;
+}
+#otherSubHead {
+	font-family: "Ubuntu";
+	font-size: 20px;
+	color: black;
+}
+#seeAll {
+	padding: 0 0 50px 0;
+}
+#headLine {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#navLinks {
+	font-family: "Ubuntu";
+	font-size: 20px;
+	color: black;
+	padding: 0 10px 0 0;
+}
+#contactHe {
+	color: white;
+	font-size: 20px;
+}
+.col-sm-10 {
+	padding-bottom: 100px;
+	padding-right: 100px;
+}
+hr {
+	font-family: "Ubuntu";
+	margin-top: 50px;
+	border-color: black;
+	width: 25%;
+}
+a {
+	font-family: "Ubuntu";
+	text-decoration: none;
+}		
