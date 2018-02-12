@@ -62,6 +62,11 @@ p {
 	border-color: black;
 	width: 10%;
 }
+#footerLine {
+	margin-top: 0;
+	border-color: white;
+	width: 100%;
+}
 /*Icon styling*/
 #icons {
 	width: 15px;
@@ -134,6 +139,14 @@ p {
 #roundBtn {
 	border-radius: 500px;
 	padding: 10px 45px 10px 45px;
+}
+#showHide {
+	display: none;
+}
+@media only screen and (max-width: 575px) { 
+	#showHide {
+		display: block;
+	}
 }
 .col-sm-10 {
 	padding-bottom: 100px;
