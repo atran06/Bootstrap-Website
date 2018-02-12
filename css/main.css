@@ -13,79 +13,126 @@ p {
 	font-size: 30px;
 	color: white;
 }
+/*The header for the about collumn*/
 #about {
 	font-family: "Ubuntu";
 	padding: 50px 0 10px 0;
 	font-size: 30px;
 	color: black;
 }
+/*Styling for the body of the about collumn*/
 #aboutContent {
 	font-family: "Ubuntu";
 	color: black;
 	font-size: 20px;
 }
+/*Styling the links at the collumn*/
 #aboutContentLink {
 	font-family: "Ubuntu";
 	color: black;
 	font-size: 18px;
 }
+/*Title for each post*/
 #blogTitle {
 	font-family: "Ubuntu";
 	font-size: 30px;
 	padding: 50px 0 0px 0;
 }
+/*The date and such under the title*/
 #blogCap{
 	font-family: "Ubuntu";
 	color: black;
 	font-size: 15px;
 }
+/*The body of the posts*/
 #blogContent {
 	font-family: "Ubuntu";
 	font-size: 20px;
 	color: black;
 }
+/*The lines on the side collumn for the home page*/
 #aboutSideHome {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 }
+/*The lines for the side collumn for every other page*/
 #aboutSide {
-	margin-top: 50px;
+	margin-top: 0;
 	border-color: black;
 	width: 10%;
 }
+/*Icon styling*/
 #icons {
 	width: 15px;
 	height: 15px;
 }
+/*Headers for the other pages*/
 #otherPGHead {
 	font-family: "Ubuntu";
 	padding-top: 50px;
 	font-size: 100px;
 	color: black;
 }
+/*Sub head for the other pages*/
 #otherSubHead {
 	font-family: "Ubuntu";
 	font-size: 20px;
 	color: black;
 }
+/*Drop down style*/
 #seeAll {
 	padding: 0 0 50px 0;
 }
+/*Line on the head of other pages*/
 #headLine {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 }
+/*links*/
 #navLinks {
 	font-family: "Ubuntu";
 	font-size: 20px;
 	color: black;
 	padding: 0 10px 0 0;
 }
+#navLinksOn {
+	font-family: "Ubuntu";
+	font-size: 20px;
+	color: black;
+	padding: 0 10px 0 0;
+	text-decoration: underline;
+}
 #contactHe {
 	color: white;
 	font-size: 20px;
+}
+#footer {
+	margin: 100px 0 0 0;
+	padding: 20px 0 20px 0;
+	background: #444444;
+}
+#footerHead {
+	font-size: 30px;
+}
+#footerLinkHead {
+	font-size: 20px;
+	color: white;
+}
+#footerLinks {
+	margin: 0;
+	font-size: 15px;
+	list-style: none;
+	text-decoration: none;
+}
+#footerIcons {
+	width: 25px;
+	height: 25px;
+}
+#roundBtn {
+	border-radius: 500px;
+	padding: 10px 45px 10px 45px;
 }
 .col-sm-10 {
 	padding-bottom: 100px;
