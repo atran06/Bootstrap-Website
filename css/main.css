@@ -4,11 +4,30 @@
 }
 h1 {
 	font-family: "Ubuntu";
-	padding-top: 50px;
+	padding-top: 100px;
 	font-size: 100px;
 	color: white;
 }
 p {
+	font-family: "Ubuntu";
+	font-size: 30px;
+	color: white;
+}
+#homeHead {
+	font-family: "Ubuntu";
+	font-size: 30px;
+	color: white;
+}
+@media only screen and (max-width: 748px) {
+	#homeHead {
+		font-family: "Ubuntu";
+		font-size: 30px;
+		color: white;
+		padding-bottom: 200px;
+	}
+}
+#jumboDesc {
+	padding-top: 100px;
 	font-family: "Ubuntu";
 	font-size: 30px;
 	color: white;
@@ -72,6 +91,10 @@ p {
 	width: 15px;
 	height: 15px;
 }
+#iconsNav {
+	width: 50px;
+	height: 50px;
+}
 /*Headers for the other pages*/
 #otherPGHead {
 	font-family: "Ubuntu";
@@ -116,7 +139,7 @@ p {
 #footer {
 	margin: 100px 0 0 0;
 	padding: 20px 0 20px 0;
-	background: #444444;
+	background: #343a40;
 }
 #footerHead {
 	font-size: 30px;
@@ -131,6 +154,16 @@ p {
 	font-size: 15px;
 	list-style: none;
 	text-decoration: none;
+}
+#footLink {
+	color: white;
+	transition: all 0.3s ease-in-out;
+}
+#footLink:hover {
+	color: black;
+	text-decoration-style: none;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
 }
 #footerIcons {
 	width: 25px;
@@ -160,7 +193,7 @@ hr {
 a {
 	font-family: "Ubuntu";
 	text-decoration: none;
-}	
+}		
 li {
 	font-family: "Ubuntu";
 }	
