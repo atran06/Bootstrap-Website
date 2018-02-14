@@ -19,12 +19,19 @@ p {
 	color: white;
 	padding-bottom: 100px;
 }
-@media only screen and (max-width: 748px) {
+@media only screen and (max-width: 768px) {
 	#homeHead {
 		font-family: "Ubuntu";
 		font-size: 30px;
 		color: white;
-		padding-bottom: 250px;
+	}
+}
+@media only screen and (max-width: 575px) {
+	#homeHead {
+		font-family: "Ubuntu";
+		font-size: 30px;
+		color: white;
+		padding-top: 75px;
 	}
 }
 #jumboDesc {
@@ -181,10 +188,6 @@ p {
 	#showHide {
 		display: block;
 	}
-}
-.col-sm-10 {
-	padding-bottom: 100px;
-	padding-right: 100px;
 }
 hr {
 	margin-top: 50px;
