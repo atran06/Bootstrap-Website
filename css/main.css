@@ -7,7 +7,7 @@ body {
 }
 h1 {
 	font-family: "Ubuntu";
-	padding-top: 100px;
+	padding-top: 10vh;
 	font-size: 100px;
 	color: white;
 }
@@ -15,12 +15,28 @@ p {
 	font-family: "Ubuntu";
 	font-size: 30px;
 	color: white;
+	margin: 0;
 }
 #homeHead {
 	font-family: "Ubuntu";
 	font-size: 30px;
 	color: white;
 	padding-bottom: 100px;
+}
+#feature {
+	background-color: #70abaf;
+	margin: 0px;
+	height: 20vh;
+}
+#featImg {
+	height: 150px;
+}
+@media (max-width: 548px){
+	#feature {
+	background-color: #70abaf;
+	margin: 0px;
+	height: 30vh;
+	}
 }
 @media only screen and (max-width: 768px min-width: 575px) {
 	#homeHead {
@@ -37,6 +53,18 @@ p {
 		margin-top: 100px;
 	}
 }
+#left {
+	background-color: #254e58;
+	height: 50vh;
+}
+#middle {
+	background-color: #112d32;
+	height: 50vh;
+}
+#right {
+	background-color: #4f4a41;
+	height: 50vh;
+}
 #jumboDesc {
 	padding-top: 100px;
 	font-family: "Ubuntu";
@@ -48,7 +76,7 @@ p {
 	font-family: "Ubuntu";
 	padding: 50px 0 10px 0;
 	font-size: 30px;
-	color: #254e58;
+	color: #005c82;
 }
 /*Styling for the body of the about collumn*/
 #aboutContent {
@@ -124,12 +152,6 @@ p {
 #seeAll {
 	padding: 0 0 50px 0;
 }
-/*Line on the head of other pages*/
-#headLine {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
 /*links*/
 #navLinks {
 	font-family: "Ubuntu";
@@ -150,6 +172,11 @@ p {
 }
 #footer {
 	margin: 100px 0 0 0;
+	padding: 20px 0 20px 0;
+	background: #343a40;
+}
+#footerHome {
+	margin: 0 0 0 0;
 	padding: 20px 0 20px 0;
 	background: #343a40;
 }

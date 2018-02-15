@@ -3052,13 +3052,13 @@ fieldset:disabled a.btn {
   color: #343a40;
   background-color: transparent;
   background-image: none;
-  border-color: #112d32;
+  border-color: #009ada;
 }
 
 .btn-outline-dark:hover {
   color: #fff;
-  background-color: #112d32;
-  border-color: #112d32;
+  background-color: #009ada;
+  border-color: #009ada;
 }
 
 .btn-outline-dark:focus, .btn-outline-dark.focus {
@@ -4998,6 +4998,20 @@ tbody.collapse.show {
 }
 
 .jumbotron-fluid {
+  /*background-color: #88bdbc;*/
+ /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/gradientBack.png);*/
+  background-image: url(../images/gradientBack.png);
+  background-position: 0% 55%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-right: 0;
+  padding-left: 0;
+  border-radius: 0;
+  min-height: 50vh;
+  margin: 0;
+}
+@media (max-width: 576px) {
+  .jumbotron-fluid {
   background-color: #88bdbc;
   /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/img3.jpg);*/
   background-position: 0% 55%;
@@ -5007,6 +5021,8 @@ tbody.collapse.show {
   padding-left: 0;
   border-radius: 0;
   min-height: 70vh;
+  margin: 0;
+  }
 }
 
 .alert {
