@@ -23,14 +23,6 @@ p {
 	color: white;
 	padding-bottom: 100px;
 }
-#feature {
-	background-color: #70abaf;
-	margin: 0px;
-	height: 20vh;
-}
-#featImg {
-	height: 150px;
-}
 @media (max-width: 548px){
 	#feature {
 	background-color: #70abaf;
@@ -52,6 +44,9 @@ p {
 		color: white;
 		margin-top: 100px;
 	}
+}
+#thirdHead {
+	padding-top: 20px;
 }
 #left {
 	background-color: #254e58;
@@ -82,6 +77,11 @@ p {
 #aboutContent {
 	font-family: "Ubuntu";
 	color: black;
+	font-size: 20px;
+}
+#aboutContentWhite {
+	font-family: "Ubuntu";
+	color: white;
 	font-size: 20px;
 }
 /*Styling the links at the collumn*/
@@ -211,9 +211,14 @@ p {
 #roundBtn {
 	border-radius: 500px;
 	padding: 10px 45px 10px 45px;
+	margin-bottom: 10px;
 }
 #showHide {
 	display: none;
+}
+.white {
+	color: white;
+	border-color: white;
 }
 @media only screen and (max-width: 575px) { 
 	#showHide {
