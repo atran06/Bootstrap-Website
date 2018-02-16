@@ -11,6 +11,14 @@ h1 {
 	padding-top: 30%;
 	color: white;
 }
+@media (max-width: 1537px) {
+	h1 {
+	font-family: "Ubuntu";
+	font-size: 100px;
+	padding-top: 20%;
+	color: white;
+	}
+}
 p {
 	font-family: "Ubuntu";
 	font-size: 30px;
