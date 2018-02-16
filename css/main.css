@@ -7,8 +7,8 @@ body {
 }
 h1 {
 	font-family: "Ubuntu";
-	padding-top: 10vh;
 	font-size: 100px;
+	padding-top: 30%;
 	color: white;
 }
 p {
@@ -21,28 +21,13 @@ p {
 	font-family: "Ubuntu";
 	font-size: 30px;
 	color: white;
-	padding-bottom: 100px;
+	padding-bottom: 30px;
 }
 @media (max-width: 548px){
 	#feature {
 	background-color: #70abaf;
 	margin: 0px;
 	height: 30vh;
-	}
-}
-@media only screen and (max-width: 768px min-width: 575px) {
-	#homeHead {
-		font-family: "Ubuntu";
-		font-size: 30px;
-		color: white;
-	}
-}
-@media only screen and (max-width: 575px) {
-	#homeHead {
-		font-family: "Ubuntu";
-		font-size: 30px;
-		color: white;
-		margin-top: 100px;
 	}
 }
 #thirdHead {
@@ -212,6 +197,12 @@ p {
 	border-radius: 500px;
 	padding: 10px 45px 10px 45px;
 	margin-bottom: 10px;
+}
+#roundBtn2 {
+	font-size: 20px;
+	border-radius: 10px;
+	padding: 10px 45px 10px 45px;
+	margin: 0;
 }
 #showHide {
 	display: none;
