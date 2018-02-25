@@ -5064,8 +5064,7 @@ tbody.collapse.show {
 }
 
 .jumbotron-fluid {
-  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/imgg.png);*/
-  background-image: url(../Images/imgg.png);
+  background-image: url(../images/imgg.png);
   background-position: 0% 55%;
   background-size: cover;
   background-repeat: no-repeat;
