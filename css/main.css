@@ -38,20 +38,17 @@ p {
 	height: 30vh;
 	}
 }
-#thirdHead {
-	padding-top: 20px;
+#musicName {
+	font-family: "Ubuntu";
+	color: black;
+	padding: 20px 0 0 0px;
+	font-size: 20px;
 }
-#left {
-	background-color: #254e58;
-	height: 50vh;
-}
-#middle {
-	background-color: #112d32;
-	height: 50vh;
-}
-#right {
-	background-color: #4f4a41;
-	height: 50vh;
+#musicCategory {
+	color: black;
+	font-family: "Ubuntu";
+	padding-top: 50px;
+	font-size: 50px;
 }
 #jumboDesc {
 	padding-top: 100px;
@@ -108,12 +105,6 @@ p {
 	font-family: "Ubuntu";
 	font-size: 20px;
 	color: black;
-}
-/*The lines on the side collumn for the home page*/
-#aboutSideHome {
-	margin: 0;
-	padding: 0;
-	width: 100%;
 }
 /*The lines for the side collumn for every other page*/
 #aboutSide {
@@ -242,4 +233,8 @@ a {
 }		
 li {
 	font-family: "Ubuntu";
-}	
+}
+audio {
+	padding-top: 50px;
+	width: 420px;
+}

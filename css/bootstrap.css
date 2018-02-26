@@ -5074,7 +5074,7 @@ tbody.collapse.show {
   margin: 0 0 50px 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .jumbotron-fluid {
     background-image: none;
     background-color: #76b0a0;
