@@ -108,7 +108,7 @@ p {
 }
 /*The lines for the side collumn for every other page*/
 #aboutSide {
-	margin-top: 0;
+	margin-top: 20px;
 	border-color: black;
 	width: 10%;
 }
@@ -216,6 +216,10 @@ p {
 .white {
 	color: white;
 	border-color: white;
+}
+.noSpace {
+	margin: 0;
+	padding: 0;
 }
 @media only screen and (max-width: 575px) { 
 	#showHide {
