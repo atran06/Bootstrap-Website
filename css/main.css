@@ -25,6 +25,9 @@ p {
 	color: white;
 	margin: 0;
 }
+#thankYou {
+	margin-bottom: 15px;
+}
 #contactTopMargin {
 	margin-top: 50px; 
 }
