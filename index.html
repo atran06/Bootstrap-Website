@@ -49,10 +49,10 @@
         				<a class="nav-link" href="#">Porfolio</a>
       				</li>
       				<li class="nav-item">
-        				<a class="nav-link" href="#">About Me</a>
+        				<a class="nav-link" href="#aboutMe">About Me</a>
       				</li>
       				<li class="nav-item">
-        				<a class="nav-link" href="#">Contact</a>
+        				<a class="nav-link" href="contact.html">Contact</a>
       				</li>
     			</ul>
 			</div>
@@ -129,6 +129,32 @@
 				Click below to send me an email!
 			</p>
 			<button type="button" class="btn btn-outline-dark btn-md" id="roundBtn2">Contact</button>
+		</div>
+	</div>
+</div>
+
+<div id="aboutMe">
+	<div class="container">
+		<div class="text-center">
+			<h1 id="musicCategory">About Me</h1>
+			<hr id="aboutSide">
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<p id="aboutContent">
+					I'm a web and game devloper based in San Jose, California.
+					<br>
+					<br>
+					The languages I know include: <br>
+					Java, HTML, CSS, JavaScript, MySQL, and PHP 
+					<p id="aboutContent">
+						Aside from programing, I enjoy making/playing music and bodybuilding.
+					</p>
+				</p>
+			</div>
+			<div class="col-lg-6 text-right">
+				<img src="images/contact.png" id="smaller">
+			</div>
 		</div>
 	</div>
 </div>
@@ -237,7 +263,24 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+	$(function() {
+	  	$('a[href*=#]:not([href=#])').click(function() {
+	   		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      	var target = $(this.hash);
+	      	target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      	if (target.length) {
+	        	$('html,body').animate({
+	          		scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      		}
+	    	}
+	  	});
+	});
+</script>
 
 </body>
 </html>

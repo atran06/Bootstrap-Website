@@ -25,6 +25,9 @@ p {
 	color: white;
 	margin: 0;
 }
+#contactTopMargin {
+	margin-top: 50px; 
+}
 #homeHead {
 	font-family: "Ubuntu";
 	font-size: 30px;
@@ -86,6 +89,14 @@ p {
 	font-family: "Ubuntu";
 	color: black;
 	font-size: 18px;
+}
+#smaller {
+	width: 300px;
+}
+@media (max-width: 548px){
+	#smaller {
+		display: none;
+	}
 }
 /*Title for each post*/
 #blogTitle {
@@ -167,7 +178,7 @@ p {
 	background: #343a40;
 }
 #footerHome {
-	margin: 0 0 0 0;
+	margin: 50px 0 0 0;
 	padding: 20px 0 20px 0;
 	background: #343a40;
 }
