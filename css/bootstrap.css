@@ -5064,7 +5064,8 @@ tbody.collapse.show {
 }
 
 .jumbotron-fluid {
-  background-image: url(../images/imgg.png);
+  background-image: url(../images/imgg1.png);
+  background-attachment: fixed;
   background-position: 0% 55%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -5080,7 +5081,7 @@ tbody.collapse.show {
     background-color: #76b0a0;
     padding: 0 0 50px 0;
     border-radius: 0;
-    min-height: 30vh;
+    height: 100vh;
     margin: 0 0 50px 0;
   }
 }
