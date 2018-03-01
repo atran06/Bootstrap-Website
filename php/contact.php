@@ -21,7 +21,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-transparent" id="thankYou">
 		<div class="container">
 		<a href="index.html"><img src="../images/icon.png" id="iconsNav"></a>
-  		<a class="navbar-brand" href="index.html">&nbsp&nbsp&nbspArthur Tran</a>
+  		<a class="navbar-brand" href="../index.html">&nbsp&nbsp&nbspArthur Tran</a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
   		</button>
@@ -62,13 +62,14 @@
 		$message = $_POST['message'];
 		$to = 'tran.art13@gmail.com';
 		$human = $_POST['human'];
-		$header = 'New message from: ' . $first . ' ' . $last;
+		$subject = 'New message from: ' . $first . ' ' . $last;
+		$body = $message . "\n" . 'From: ' . $from;
 	?>
 
 	<div class="text-center">
 		<?php
 			if($_POST['submit'] && $human == 4) {
-				if(mail($to, $header, $message)) {
+				if(mail($to, $subject, $body)) {
 					echo "Thank you! I'll be in touch";
 				}
 				else {	
