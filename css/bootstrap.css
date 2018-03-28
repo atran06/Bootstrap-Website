@@ -482,6 +482,7 @@ mark,
   max-width: 100%;
   height: auto;
   padding-bottom: 20px;
+  margin-top: 10px;
 }
 
 .img-thumbnail {
