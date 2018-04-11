@@ -25,6 +25,19 @@ p {
 	color: white;
 	margin: 0;
 }
+.black-text {
+	color: black;
+	font-size: 25px;
+}
+.margin-top {
+	margin-top: 20px;
+}
+.margin-top-large {
+	margin-top: 50px;
+}
+#music-feature {
+	background-color: black;
+}
 #thankYou {
 	margin-bottom: 15px;
 }
