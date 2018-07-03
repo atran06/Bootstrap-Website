@@ -7,7 +7,7 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	
+
 	<!-- Tab icons -->
 	<link rel="icon" type="image/png" href="../images/iconTab.png">
 	<link rel="shortcut icon" type="image/png" href="../images/iconTab.png">
@@ -61,18 +61,17 @@
 		$from = $_POST['email'];
 		$message = $_POST['message'];
 		$to = 'tran.art13@gmail.com';
-		$human = $_POST['human'];
 		$subject = 'New message from: ' . $first . ' ' . $last;
 		$body = $message . "\n" . 'From: ' . $from;
 	?>
 
 	<div class="text-center">
 		<?php
-			if($_POST['submit'] && $human == 4) {
+			if($_POST['submit']) {
 				if(mail($to, $subject, $body)) {
 					echo "Thank you! I'll be in touch";
 				}
-				else {	
+				else {
 					echo "I'm sorry, something went wrong sending your email. Go back and try again.";
 				}
 			}

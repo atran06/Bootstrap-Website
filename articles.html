@@ -58,11 +58,45 @@
 
 <div class="container">
 
-		<!-- <a href="index.html" id="navLinks">Home</a>|&nbsp
-		<a href="games.html" id="navLinks">Games</a>|&nbsp
-		<a href="" id="navLinksOn">Articles</a>
+	<!-- <a href="index.html" id="navLinks">Home</a>|&nbsp
+	<a href="games.html" id="navLinks">Games</a>|&nbsp
+	<a href="" id="navLinksOn">Articles</a>
 
-		<hr id="headLine"> -->
+	<hr id="headLine"> -->
+
+	<div class="row">
+
+		<!-- Blog Posts on the main page -->
+		<div class="col-sm-12">
+			<!-- Each post -->
+			<h4 id="blogTitle">Tutorial: Drawing Circles with OpenGL</h4>
+			<p id="blogCap">
+				<img src="images/calendar.png" id="icons">&nbsp&nbsp&nbspJuly 7, 2018&nbsp&nbsp&nbsp
+				<img src="images/pencil.png" id="icons">&nbsp&nbspArthur Tran
+			</p>
+
+			<!-- images should have a height of around 300px -->
+
+			<p id="blogContent">
+				<p id="blogContent">
+					<img src="articles/openGL/images/oglc-filled.png" width="30%" style="margin-top: 10px;">
+					<img src="articles/openGL/images/oglc-out.png" width="30%" style="margin-top: 10px;">
+					<br><br>
+					As you probably know, unlike Java's 2D library Swing or JavaFX, OpenGL uses more of a "from scratch" type of
+					rendering. You would usually have to specify certain vertices that OpenGL would use to connect to form certain
+					shapes. In this post I'll be focusing more on Java's implementation of OpenGL using the LWJGL but the ideas
+					and concepts are very similar in C++.
+					<br><br>
+					As a forewarning, knowledge of a little trigonometry is required for this and this tutorial will assume that
+					you know basic Java and OpenGL.
+				</p>
+			</p>
+				<a href="articles/openGL/Drawing-Circles-With-OpenGL.html">
+					<button type="button" class="btn btn-outline-success btn-md">Read More</button>
+				</a>
+			<hr>
+		</div>
+	</div>
 
 	<div class="row">
 
@@ -71,7 +105,7 @@
 			<!-- Each post -->
 			<h4 id="blogTitle">First blog post: A new website</h4>
 			<p id="blogCap">
-				<img src="images/calendar.png" id="icons">&nbsp&nbsp&nbspFebuary 10, 2017&nbsp&nbsp&nbsp
+				<img src="images/calendar.png" id="icons">&nbsp&nbsp&nbspFebuary 10, 2018&nbsp&nbsp&nbsp
 				<img src="images/pencil.png" id="icons">&nbsp&nbspArthur Tran
 			</p>
 
@@ -96,8 +130,8 @@
 
 	</div>
 </div>
-
-<div id="footer">
+<!-- Footer -->
+<div id="footerHome">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-3">
@@ -129,10 +163,18 @@
 				</div>
 			</div>
 			<div class="col-md-3">
-				<img src="images/ig.png" id="footerIcons">&nbsp&nbsp
-				<img src="images/twitter.png" id="footerIcons">&nbsp&nbsp
-				<img src="images/youtube.png" id="footerIcons">&nbsp&nbsp
-				<img src="images/github.png" id="footerIcons">&nbsp&nbsp
+				<a href="https://instagram.com/arthur_tran" target="_blank" style="text-decoration: none;">
+					<img src="images/ig.png" id="footerIcons">
+				</a>&nbsp&nbsp
+				<a href="https://twitter.com/" target="_blank" style="text-decoration: none;">
+					<img src="images/twitter.png" id="footerIcons">&nbsp&nbsp
+				</a>
+				<a href="https://www.youtube.com/channel/UCxjQ1tR8lkMkW-9C2XBiQLQ" target="_blank" style="text-decoration: none;">
+					<img src="images/youtube.png" id="footerIcons">&nbsp&nbsp
+				</a>
+				<a href="https://github.com/atran06" target="_blank" style="text-decoration: none;">
+					<img src="images/github.png" id="footerIcons">&nbsp&nbsp
+				</a>
 				<br>
 				<div class="text-left">
 					<a href="https://www.paypal.me/atran06">
@@ -143,6 +185,9 @@
 			<div id="showHide">
 					<hr id="footerLine">
 			</div>
+		</div>
+		<div class="text-center" style="color:white;">
+			&copy;2018 Arthur Tran.
 		</div>
 	</div>
 </div>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Compatability for IE -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+
+	<link rel="stylesheet" type="text/css" href="../../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+
+	<link rel="icon" type="image/png" href="../../images/iconTab.png">
+	<link rel="shortcut icon" type="image/png" href="../../images/iconTab.png">
+	<link rel="shortcut icon" href="../../Images/iconTab.png" type="image/png">
+	<link rel="icon" href="../../Images/iconTab.png" type="image/png">
+
+	<title>Drawing Circles with OpenGL</title>
+
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+			<div class="container">
+			<a href="../../index.html"><img src="../../images/icon.png" id="iconsNav"></a>
+	  		<a class="navbar-brand" href="../../index.html">&nbsp&nbsp&nbspArthur Tran</a>
+	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    		<span class="navbar-toggler-icon"></span>
+	  		</button>
+
+	  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    		<ul class="navbar-nav ml-auto">
+	      			<li class="nav-item">
+	        			<a class="nav-link" href="../../index.html">Home</a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<a class="nav-link" href="../../games.html">Games</a>
+	      			</li>
+	      			<li class="nav-item active">
+	        			<a class="nav-link" href="../../articles.html">Articles</a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<a class="nav-link" href="../../music.html">Music</a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<a class="nav-link" href="../../projects.html">Projects</a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<a class="nav-link" href="../index.html">About Me</a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<a class="nav-link" href="../contact.html">Contact</a>
+	      			</li>
+	    		</ul>
+			</div>
+		</div>
+	</nav>
+
+<div class="container">
+
+	<!-- <a href="index.html" id="navLinks">Home</a>|&nbsp
+	<a href="games.html" id="navLinks">Games</a>|&nbsp
+	<a href="" id="navLinksOn">Articles</a>
+
+	<hr id="headLine"> -->
+
+	<div class="row">
+
+		<!-- Blog Posts on the main page -->
+		<div class="col-sm-12">
+			<!-- Each post -->
+			<h4 id="blogTitle">Tutorial: Drawing Circles with OpenGL</h4>
+			<p id="blogCap">
+				<img src="../../images/calendar.png" id="icons">&nbsp&nbsp&nbspJuly 7, 2018&nbsp&nbsp&nbsp
+				<img src="../../images/pencil.png" id="icons">&nbsp&nbspArthur Tran
+			</p>
+
+			<!-- images should have a height of around 300px -->
+
+			<p id="blogContent">
+				<p id="blogContent">
+					<img src="images/oglc-filled.png" width="30%">
+					<img src="images/oglc-out.png" width="30%">
+					<br><br>
+					As you probably know, unlike Java's 2D library Swing or JavaFX, OpenGL uses more of a "from scratch" type of
+					rendering. You would usually have to specify certain vertices that OpenGL would use to connect to form certain
+					shapes. In this post I'll be focusing more on Java's implementation of OpenGL using the LWJGL but the ideas
+					and concepts are very similar in C++.
+					<br><br>
+					As a forewarning, knowledge of a little trigonometry is required for this and this tutorial will assume that
+					you know basic Java and OpenGL.
+                    <br><br>
+                    <strong>Setup</strong>
+                    <br>
+                    I'm going to be using my 2D game library I wrote and you can find a piece of example starter code
+                    <a href="#">here</a>
+                    <br><br>
+                    But basically what you need is a loop that updates the screen every so often and clears the screen
+                    between every update.
+                    <br><br>
+                    <strong>The Circle</strong>
+                    <br>
+                    If you've studied trigonometry at all or are familiar with circles and angles, you would know that a circle
+                    is 360 degrees around. So what you can do, is create a <code>for</code> loop that iterates through each angle
+                    of the circle and draws a vertex there. It would look a little something like this:
+                    <br><br>
+                    <code>
+                        for(int i = 0; i < 360; i++) {<br>
+                        &ensp;&ensp;&ensp;&ensp;<em>//code</em><br>
+                        }
+                    </code>
+                    <br><br>
+                    The unit circle tells us that the cosine of an angle gives us the x coordinate of a point that is 1 unit away
+                    from the origin and sine gives us the y coordinate.
+                    <br><br>
+                    However, in Java, the <code>Math.cos()</code> function takes in an angle in radians so we would need to use
+                    <code>Math.toRadians()</code> to do the conversion.
+                    <br><br>
+                    We would then need the coordinate of the origin of the circle which we will call <em>originX</em> and
+                    <em>originY</em>
+                    <br><br>
+                    With this in mind, we can use this formula:
+                    <br><br>
+                    <em>x = (cos(angle) * radius) + originX</em>
+                    <br>
+                    and
+                    <br>
+                    <em>y = (sin(angle) * radius) + originY</em>
+                    <br><br>
+                    If we then draw a vector from (originX, originY) to (x, y), we will get something that looks like this:
+					<img src="images/oglc-line.png" width="30%">
+					<br>
+                    We just need to do this 360 times in the <code>for</code> loop and we will get a circle. Let's see
+                    what this would look like in code.
+                    <br><br>
+                    <strong>The Code</strong>
+                    <br><br>
+                    <code>
+                        int originX = 500;<br>
+                        int originY = 500;<br>
+                        int radius = 100 <br><br>
+                        GL11.glBegin(GL11.GL_Line_Loop); <em>//use GL_Line_Loop for outlined and GL_Line_Strip for a
+                        filled in circle.</em><br><br>
+                        for(int i = 0; i < 360; i++) {<br>
+                        &ensp;&ensp;&ensp;&ensp;int angleToRadians = Math.toRadians(i);
+                        <br><br>
+                        &ensp;&ensp;&ensp;&ensp;int x = (Math.cos(angleToRadians) * radius) + originX;
+                        <br>
+                        &ensp;&ensp;&ensp;&ensp;int y = (Math.sin(angleToRadians) * radius) + originY;
+                        <br><br>
+                        &ensp;&ensp;&ensp;&ensp;GL11.glVertex2i(x, y);<br>
+                        }
+                        <br><br>
+                        GL11.glEnd();
+                    </code>
+                    <br><br>
+                    <strong>Conclusion</strong>
+                    <br>
+                    And there you go! You should end up with a circle that has a diameter of two times the specified radius.
+                    <br><br>
+                    If you don't feel like writing this out every time you want to draw a circle, feel free to checkout and use
+                    my Java and OpenGL library <em>Arch2DGL</em>. It has methods like <code>renderer.fill(new Ellipse
+                        (0, 0, 100, 100));</code> which could make your life a lot easier.
+                    <br><br>
+                    You can go ahead and look at the GitHub code <a href="#">here</a> or <a href="#">download the .jar</a>.
+				</p>
+			</p>
+			<hr style="border-width: 1px;">
+		</div>
+	</div>
+</div>
+
+<div class="row" id="aboutMe">
+	<div class="container">
+
+	</div>
+</div>
+<!-- Footer -->
+<div id="footerHome">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<p id="footerHead">Arthur Tran</p>
+				<div id="showHide">
+					<hr id="footerLine">
+				</div>
+			</div>
+
+			<div class="col-sm-3">
+				<h3 id="footerLinkHead">Links</h3>
+				<div id="footerLinks">
+					<a id="footLink" href="../../index.html">Home</a><br>
+					<a id="footLink" href="../../games.html">Games</a><br>
+					<a id="footLink" href="../../articles.html">Articles</a><br>
+				</div>
+				<br>
+				<div id="showHide">
+					<hr id="footerLine">
+				</div>
+			</div>
+
+			<div class="col-sm-3">
+				<h3 id="footerLinkHead">Contact</h3>
+				<p id="footerLinks">tran.art13@gmail.com</p>
+				<br>
+				<div id="showHide">
+					<hr id="footerLine">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<a href="https://instagram.com/arthur_tran" target="_blank" style="text-decoration: none;">
+					<img src="../../images/ig.png" id="footerIcons">
+				</a>&nbsp&nbsp
+				<a href="https://twitter.com/" target="_blank" style="text-decoration: none;">
+					<img src="../../images/twitter.png" id="footerIcons">&nbsp&nbsp
+				</a>
+				<a href="https://www.youtube.com/channel/UCxjQ1tR8lkMkW-9C2XBiQLQ" target="_blank" style="text-decoration: none;">
+					<img src="../../images/youtube.png" id="footerIcons">&nbsp&nbsp
+				</a>
+				<a href="https://github.com/atran06" target="_blank" style="text-decoration: none;">
+					<img src="../../images/github.png" id="footerIcons">&nbsp&nbsp
+				</a>
+				<br>
+				<div class="text-left">
+					<a href="https://www.paypal.me/atran06">
+						<button type="button" class="btn btn-outline-secondary btn-md" id="roundBtn">Donate</button>
+					</a>
+				</div>
+			</div>
+			<div id="showHide">
+					<hr id="footerLine">
+			</div>
+		</div>
+		<div class="text-center" style="color:white;">
+			&copy;2018 Arthur Tran.
+		</div>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
