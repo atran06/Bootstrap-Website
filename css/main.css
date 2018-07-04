@@ -11,12 +11,12 @@ h1 {
 	padding-top: 10%;
 	color: white;
 }
-@media (max-width: 1537px) {
+@media (max-width: 490px) {
 	h1 {
-	font-family: "Ubuntu";
-	font-size: 100px;
-	padding-top: 10%;
-	color: white;
+		font-family: "Ubuntu";
+		font-size: 60px;
+		padding-top: 10%;
+		color: white;
 	}
 }
 p {
@@ -24,6 +24,10 @@ p {
 	font-size: 30px;
 	color: white;
 	margin: 0;
+}
+.sideScroll{
+	overflow: auto;
+	white-space: nowrap;
 }
 .black-text {
 	color: black;

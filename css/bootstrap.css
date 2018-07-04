@@ -3122,7 +3122,7 @@ fieldset:disabled a.btn {
   border-color: white;
 }
 
-.btn-outline-white:hover {
+.btn-outline-white:hover:not(:disabled) {
   color: black;
   background-color: rgba(0, 0, 0, 0);
   border-color: rgba(0, 0, 0, 1);
@@ -3134,6 +3134,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-white.disabled, .btn-outline-white:disabled {
   color: #343a40;
+  border-color: #343a40;
   background-color: transparent;
 }
 
@@ -5084,6 +5085,24 @@ tbody.collapse.show {
     border-radius: 0;
     height: 100vh;
     margin: 0 0 50px 0;
+  }
+}
+.jumbotron-fluid-arch {
+    background: #cc5d41;
+    padding: 0 0 50px 0;
+    border-radius: 0;
+    min-height: 30vh;
+    margin: 0 0 50px 0;
+}
+
+@media (max-width: 770px) {
+  .jumbotron-fluid-arch {
+      background-image: none;
+      background-color: #cc5d41;
+      padding: 0 0 50px 0;
+      border-radius: 0;
+      height: 100vh;
+      margin: 0 0 50px 0;
   }
 }
 

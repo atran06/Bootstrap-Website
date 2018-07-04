@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<!-- Compatability for IE -->
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width = device-width, initial-scale = 1">
+
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    	<link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    	<link rel="icon" type="image/png" href="../images/iconTab.png">
+    	<link rel="shortcut icon" type="image/png" href="../images/iconTab.png">
+    	<link rel="shortcut icon" href="../Images/iconTab.png" type="image/png">
+    	<link rel="icon" href="../Images/iconTab.png" type="image/png">
+
+    	<title>Arch2DGL - Java based OpenGL framework</title>
+
+    </head>
+    <body>
+        <div class="jumbotron-fluid-arch text-center" style="margin-bottom: 30px;">
+        	<!-- Navigation Bar -->
+        	<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        		<div class="container">
+        			<!-- <a href="index.html"><img src="images/icon.png" id="iconsNav"></a> -->
+          			<a class="navbar-brand" href="index.html">Arthur Tran</a>
+          			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            			<span class="navbar-toggler-icon"></span>
+          			</button>
+
+          			<!-- Collapse button on small screens -->
+          			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+            			<ul class="navbar-nav ml-auto">
+              				<li class="nav-item">
+                				<a class="nav-link" href="../index.html">Home</a>
+              				</li>
+              				<li class="nav-item">
+                				<a class="nav-link" href="../games.html">Games</a>
+              				</li>
+              				<li class="nav-item">
+                				<a class="nav-link" href="../articles.html">Articles</a>
+              				</li>
+              				<li class="nav-item">
+                				<a class="nav-link" href="../music.html">Music</a>
+              				</li>
+              				<li class="nav-item">
+                				<a class="nav-link active" href="../projects.html">Projects</a>
+              				</li>
+              				<li class="nav-item">
+                				<a class="nav-link" href="../index.html">About Me</a>
+              				</li>
+              				<li class="nav-item">
+                				<a class="nav-link" href="contact.html">Contact</a>
+              				</li>
+            			</ul>
+        			</div>
+        		</div>
+        	</nav>
+    		<div class="container text-center">
+                <h1>Arch2DGL</h1>
+    			<p id="homeHead">
+    				2D Java and OpenGL Game Library
+    			</p>
+                <a href="https://github.com/atran06/Arch2DGL" style="text-decoration: none;">
+                    <button type="button" class="btn btn-outline-white btn-md" id="roundBtn2">Download</button>
+                </a>
+    			<!-- <a href="#" style="text-decoration: none;"> -->
+    				<button type="button" disabled class="btn btn-outline-white btn-md" id="roundBtn2">Documentation</button>
+    			<!-- </a> -->
+                <a href="https://github.com/atran06/Arch2DGL" style="text-decoration: none;">
+    				<button type="button" class="btn btn-outline-white btn-md" id="roundBtn2">GitHub</button>
+    			</a>
+    		</div>
+
+        </div>
+        <div class="container" style="background:white;">
+            <div class="text-center">
+                <h4>Arch2DGL</h4>
+                <p id="aboutContent" class="text-left">
+                    <strong>Arch2DGL</strong> is a 2D java game framework that is based on OpenGL using the LWJGL which provides direct access
+                    to OpenGL. We also provide documentation and tutorials on how to use our framework <a href="#">here</a>.
+                    <br><br>
+                    <strong>Arch2DGL</strong> also provides simple methods and interfaces that are easy and intuitive utilizing low level
+                    OpenGL and GLFW. The framework is ideal for newer programmers that are looking to jump right into game/2D development but aren't willing to learn
+                    the ins and outs of OpenGL.
+                    <br><br>
+                    The library is open source and free to use and feel free to contribute to the code and development
+                    <a href="https://github.com/atran06/Arch2DGL" target="_blank">here</a>.
+                </p>
+            </div>
+        </div>
+        <div style="background: #76b0a0; margin: 60px 0 0 0;">
+            <div class="container" style="padding-top: 30px; padding-bottom: 30px;">
+                <div class="text-center">
+                    <h4 style="color: white; margin-bottom: 20px;">Games Made with Arch2DGL</h4>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <!-- Images should be 300x1000 -->
+                                <img class="d-block w-100" src="../images/contacc.png" alt="First slide">
+                                <div class="img_title_wrap">
+        							<p class="img_title">Clock</p>
+        						</div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="../images/contacc.png" alt="Second slide">
+                                <div class="img_title_wrap">
+        							<p class="img_title">Clock</p>
+        						</div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="../images/contacc.png" alt="Third slide">
+                                <div class="img_title_wrap">
+        							<p class="img_title">Clock</p>
+        						</div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footerHome" style="margin-top: 0px;">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-3">
+        				<p id="footerHead">Arthur Tran</p>
+        				<div id="showHide">
+        					<hr id="footerLine">
+        				</div>
+        			</div>
+
+        			<div class="col-sm-3">
+        				<h3 id="footerLinkHead">Links</h3>
+        				<div id="footerLinks">
+        					<a id="footLink" href="index.html">Home</a><br>
+        					<a id="footLink" href="games.html">Games</a><br>
+        					<a id="footLink" href="articles.html">Articles</a><br>
+        				</div>
+        				<br>
+        				<div id="showHide">
+        					<hr id="footerLine">
+        				</div>
+        			</div>
+
+        			<div class="col-sm-3">
+        				<h3 id="footerLinkHead">Contact</h3>
+        				<p id="footerLinks">tran.art13@gmail.com</p>
+        				<br>
+        				<div id="showHide">
+        					<hr id="footerLine">
+        				</div>
+        			</div>
+        			<div class="col-md-3">
+        				<a href="https://instagram.com/arthur_tran" target="_blank" style="text-decoration: none;">
+        					<img src="../images/ig.png" id="footerIcons">
+        				</a>&nbsp&nbsp
+        				<a href="https://twitter.com/" target="_blank" style="text-decoration: none;">
+        					<img src="../images/twitter.png" id="footerIcons">&nbsp&nbsp
+        				</a>
+        				<a href="https://www.youtube.com/channel/UCxjQ1tR8lkMkW-9C2XBiQLQ" target="_blank" style="text-decoration: none;">
+        					<img src="../images/youtube.png" id="footerIcons">&nbsp&nbsp
+        				</a>
+        				<a href="https://github.com/atran06" target="_blank" style="text-decoration: none;">
+        					<img src="../images/github.png" id="footerIcons">&nbsp&nbsp
+        				</a>
+        				<br>
+        				<div class="text-left">
+        					<a href="https://www.paypal.me/atran06">
+        						<button type="button" class="btn btn-outline-secondary btn-md" id="roundBtn">Donate</button>
+        					</a>
+        				</div>
+        			</div>
+        			<div id="showHide">
+        					<hr id="footerLine">
+        			</div>
+        		</div>
+        	</div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
