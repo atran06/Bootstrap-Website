@@ -41,6 +41,25 @@
 	transition: width 1s;
 }
 
+@media (max-width: 985px) {
+	.cover-wrap {
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+	  	bottom: 0;
+	  	left: 0;
+	  	right: 0;
+	  	background: rgba(0, 0, 0, 0.6);
+	  	color: #fff;
+	  	opacity: 1;
+		width: 100%;
+	  	display: flex;
+		align-items: center;
+	  	justify-content: center;
+		transition: width 1s;
+	}
+}
+
 .img-container:hover .cover-wrap {
 	width: 100%;
 }
