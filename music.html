@@ -10,6 +10,43 @@
 
 	<title>Arthur Tran - Music</title>
 </head>
+
+<style>
+
+.img-container {
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	margin: 20px 20px 0 20px;
+}
+
+.img-container img {
+	width: 100%;
+}
+
+.cover-wrap {
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	background: rgba(0, 0, 0, 0.6);
+  	color: #fff;
+  	opacity: 1;
+	width: 0;
+  	display: flex;
+	align-items: center;
+  	justify-content: center;
+	transition: width 1s;
+}
+
+.img-container:hover .cover-wrap {
+	width: 100%;
+}
+
+</style>
+
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
@@ -38,7 +75,7 @@
         			<a class="nav-link" href="projects.html">Projects</a>
       			</li>
       			<li class="nav-item">
-        			<a class="nav-link" href="index.html">About Me</a>
+        			<a class="nav-link" href="index.html#aboutMe">About Me</a>
       			</li>
       			<li class="nav-item">
         			<a class="nav-link" href="contact.html">Contact</a>
@@ -49,7 +86,7 @@
 	</nav>
 
 	<div class="container">
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-lg-12">
 				<div class="text-left">
 					<p class="black-text margin-top">Categories:&nbsp&nbsp
@@ -59,7 +96,7 @@
 					</p>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="row text-center">
 			<div class="col-lg-12">
@@ -78,229 +115,48 @@
 				<audio controls="controls" controlsList ="nodownload" style="width: 100%;">
 						<source src="music/Room.wav" type="audio/wav">
 				</audio><br>
-				<button class="btn btn-outline-dark btn-lg">Buy</button>
+				<button disabled class="btn btn-outline-dark btn-lg">Buy</button>
 			</div>
 		</div>
 
 		<hr style="width: 100%; margin-bottom: 50px; border-width: 2px;">
 
-		<div class="row text-center">
-			<div class="col-lg-12">
-				<h2 style="font-weight: normal; margin-top: 20px; font-size: 50px;">Punk Tunes</h2>
-				<hr style="margin-top: 30px; margin-bottom: 40px; width: 20%;">
-			</div>
-		</div>
+		<div id="otherPlaylists" class="text-center">
+			<h4>Categories</h4>
 
-		<div class="row text-center" id="border">
-			<div class="col-md-6">
-				<p class="black-text" style="padding-top: 10px; height: 100%;">Room</p>
-			</div>
-			<div class="col-md-6">
-				<audio controls="controls" controlsList ="nodownload" style="width: 100%; padding-top: 3px;">
-						<source src="music/Room.wav" type="audio/wav">
-				</audio><br>
-			</div>
-		</div>
-		<div class="row text-center" id="border">
-			<div class="col-md-6">
-				<p class="black-text" style="padding-top: 10px; height: 100%;">Stuck</p>
-			</div>
-			<div class="col-md-6">
-				<audio controls="controls" controlsList ="nodownload" style="width: 100%; padding-top: 3px;">
-						<source src="music/Stuck.wav" type="audio/wav">
-				</audio><br>
-			</div>
-		</div>
-		<div class="row text-center" id="border">
-			<div class="col-md-6">
-				<p class="black-text" style="padding-top: 10px; height: 100%;">Bummer</p>
-			</div>
-			<div class="col-md-6">
-				<audio controls="controls" controlsList ="nodownload" style="width: 100%; padding-top: 3px;">
-						<source src="music/Bummer.wav" type="audio/wav">
-				</audio><br>
-			</div>
-		</div>
-		<div class="row text-center" id="border">
-			<div class="col-md-6">
-				<p class="black-text" style="padding-top: 10px; height: 100%;">The Good Life</p>
-			</div>
-			<div class="col-md-6">
-				<audio controls="controls" controlsList ="nodownload" style="width: 100%; padding-top: 3px;">
-						<source src="music/goodlife.wav" type="audio/wav">
-				</audio><br>
-			</div>
-		</div>
-
-		<div class="row text-center">
-			<div class="col-lg-12">
-				<h2 style="font-weight: normal; margin-top: 60px; font-size: 50px;">Orchestral Pieces</h2>
-				<hr style="margin-top: 30px; margin-bottom: 40px; width: 20%;">
-			</div>
-		</div>
-
-		<div class="row text-center" id="border">
-			<div class="col-md-6">
-				<p class="black-text" style="padding-top: 10px; height: 100%;">Resolutions</p>
-			</div>
-			<div class="col-md-6">
-				<audio controls="controls" controlsList ="nodownload" style="width: 100%; padding-top: 3px;">
-						<source src="music/Resolution.wav" type="audio/wav">
-				</audio><br>
-			</div>
-		</div>
-		<div class="row text-center" id="border">
-			<div class="col-md-6">
-				<p class="black-text" style="padding-top: 10px; height: 100%;">The End</p>
-			</div>
-			<div class="col-md-6">
-				<audio controls="controls" controlsList ="nodownload" style="width: 100%; padding-top: 3px;">
-						<source src="music/theend.wav" type="audio/wav">
-				</audio><br>
-			</div>
-		</div>
-
-		<div class="row text-center">
-			<div class="col-lg-12">
-				<h2 style="font-weight: normal; margin-top: 60px; font-size: 50px;">Videogame Music</h2>
-				<hr style="margin-top: 30px; margin-bottom: 40px; width: 20%;">
-			</div>
-		</div>
-
-		<div class="row text-center" id="border">
-			<div class="col-md-6">
-				<p class="black-text" style="padding-top: 10px; height: 100%;">The Purple Forest</p>
-			</div>
-			<div class="col-md-6">
-				<audio controls="controls" controlsList ="nodownload" style="width: 100%; padding-top: 3px;">
-						<source src="music/Mario-esq.wav" type="audio/wav">
-				</audio><br>
-			</div>
-		</div>
-
-	<!-- <div class="d-none d-lg-block">
-		<div class="container">
-			<div class="text-center">
-				<h1 id="musicCategory">Punk Tunes</h1>
-			</div>
-			<hr id="aboutSide">
-			<div class="text-left">
-				<div class="row">
-					<div class="col-md-6">
-						<p id="musicName">
-							Good Life
-						</p>
-						<p id="musicName">
-							Stuck
-						</p>
-						<p id="musicName">
-							Bummer
-						</p>
+			<div class="img-container">
+				<a href="music/punk.html">
+					<img src="images/punkLogo.png">
+						<div class="cover-wrap">
+							<div class="cover">
+								Punk Jams
+							</div>
+						</div>
 					</div>
-					<div class="col-md-6 text-right">
-						<audio controls="controls">
-							<source src="music/goodlife.wav" type="audio/wav">
-						</audio>
-						<audio controls="controls">
-							<source src="music/Stuck.wav" type="audio/wav">
-						</audio>
-						<audio controls="controls">
-							<source src="music/Bummer.wav" type="audio/wav">
-						</audio>
+				</a>
+			<div class="img-container">
+				<a href="music/orchestral.html">
+					<img src="images/orchLogo.png">
+					<div class="cover-wrap">
+						<div class="cover">
+							Orchestral
+						</div>
 					</div>
-				</div>
+				</a>
+			</div>
+			<div class="img-container">
+				<a href="music/videoGame.html">
+					<img src="images/vgLogo.png">
+					<div class="cover-wrap">
+						<div class="cover">
+							Video Game Music
+						</div>
+					</div>
+				</a>
 			</div>
 
-			<div class="text-center">
-				<h1 id="musicCategory">Orchestral Pieces</h1>
-			</div>
-			<hr id="aboutSide">
-			<div class="text-left">
-				<div class="row">
-					<div class="col-md-6">
-						<p id="musicName">
-							Resolution
-						</p>
-						<p id="musicName">
-							The End
-						</p>
-					</div>
-					<div class="col-md-6 text-right">
-						<audio controls="controls">
-							<source src="music/Resolution.wav" type="audio/wav">
-						</audio>
-						<audio controls="controls">
-							<source src="music/theend.wav" type="audio/wav">
-						</audio>
-					</div>
-				</div>
-			</div>
-
-			<div class="text-center">
-				<h1 id="musicCategory">Videogame Music</h1>
-			</div>
-			<hr id="aboutSide">
-			<div class="text-left">
-				<div class="row">
-					<div class="col-md-6">
-						<p id="musicName">
-							Mario-esq
-						</p>
-					</div>
-					<div class="col-md-6 text-right">
-						<audio controls="controls">
-							<source src="music/Mario-esq.wav" type="audio/wav">
-						</audio>
-					</div>
-				</div>
-			</div>
-		</div>
+        </div>
 	</div>
-
-	<div class="d-lg-none">
-		<div class="container">
-			<div class="text-center">
-				<h1 id="musicCategory">Punk Tunes</h1>
-				<hr id="aboutSide">
-
-				<audio controls="controls" style="width: 100%">
-					<source src="music/goodlife.wav" type="audio/wav">
-				</audio>
-				<p id="musicName">Good Life</p>
-
-				<audio controls="controls" style="width: 100%">
-					<source src="music/Stuck.wav" type="audio/wav">
-				</audio>
-				<p id="musicName">Stuck</p>
-
-				<audio controls="controls" style="width: 100%">
-					<source src="music/Bummer.wav" type="audio/wav">
-				</audio>
-				<p id="musicName">Bummer</p>
-
-				<h1 id="musicCategory">Orchestral Pieces</h1>
-				<hr id="aboutSide">
-
-				<audio controls="controls" style="width: 100%">
-					<source src="music/Resolution.wav" type="audio/wav">
-				</audio>
-				<p id="musicName">Resolution</p>
-
-				<audio controls="controls" style="width: 100%">
-					<source src="music/theend.wav" type="audio/wav">
-				</audio>
-				<p id="musicName">The End</p>
-
-				<h1 id="musicCategory">Videogame Music</h1>
-				<hr id="aboutSide">
-
-				<audio controls="controls" style="width: 100%">
-					<source src="music/Mario-esq.wav" type="audio/wav">
-				</audio>
-				<p id="musicName">Mario-esq</p>
-			</div>
-		</div>
-	 --></div>
 
 <!-- Footer -->
 <div id="footerHome">
