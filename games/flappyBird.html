@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    	<link rel="stylesheet" type="text/css" href="../css/main.css">
+    	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
+    	<link rel="icon" type="image/png" href="../images/iconTab.png">
+    	<link rel="shortcut icon" type="image/png" href="../images/iconTab.png">
+    	<link rel="shortcut icon" href="../Images/iconTab.png" type="image/png">
+    	<link rel="icon" href="../Images/iconTab.png" type="image/png">
+
+        <title>Flappy Bird | Arthur Tran</title>
+
+        <style>
+            @font-face {
+                font-family: "Ub";
+                src: url("../fonts/ubuntu-regular.ttf");
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            h3 {
+                font-family: "Ub";
+                font-size: 25px;
+            }
+            .containerG {
+                text-align: center;
+                margin: 0 10% 0 10%;
+            }
+            .canvas-container {
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 500px;
+                height: 500px;
+            }
+            #canvas-cover {
+                position: absolute;
+                color: white;
+                font-family: "Ub";
+                font-size: 50px;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body onload="init()">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+    			<div class="container">
+    			<a href="../index.html"><img src="../images/icon.png" id="iconsNav"></a>
+    	  		<a class="navbar-brand" href="index.html">&nbsp&nbsp&nbspArthur Tran</a>
+    	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    	    		<span class="navbar-toggler-icon"></span>
+    	  		</button>
+
+    	  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    	    		<ul class="navbar-nav ml-auto">
+    	      			<li class="nav-item">
+    	        			<a class="nav-link" href="../index.html">Home</a>
+    	      			</li>
+    	      			<li class="nav-item active">
+    	        			<a class="nav-link" href="../games.html">Games</a>
+    	      			</li>
+    	      			<li class="nav-item">
+    	        			<a class="nav-link" href="../articles.html">Articles</a>
+    	      			</li>
+    	      			<li class="nav-item">
+    	        			<a class="nav-link" href="../music.html">Music</a>
+    	      			</li>
+    	      			<li class="nav-item">
+    	        			<a class="nav-link" href="../projects.html">Projects</a>
+    	      			</li>
+    	      			<li class="nav-item">
+    	        			<a class="nav-link" href="../index.html#aboutMe">About Me</a>
+    	      			</li>
+    	      			<li class="nav-item">
+    	        			<a class="nav-link" href="../contact.html">Contact</a>
+    	      			</li>
+    	    		</ul>
+    			</div>
+    		</div>
+    	</nav>
+
+        <div class="containerG">
+            <h4 id="blogTitle">Flappy Bird!</h4>
+            <p id="blogCap">
+                <img src="../images/calendar.png" id="icons">&nbsp&nbsp&nbspJuly 9, 2018&nbsp&nbsp&nbsp
+                <img src="../images/code.png" id="icons">&nbsp<img src="../images/pencil.png" id="icons">&nbsp&nbspArthur Tran
+            </p>
+            <div class="canvas-container">
+                <canvas id="canvas" width="500px" height="500px"></canvas>
+                <div id="canvas-cover">
+                    Press 'space' to start!
+                </div>
+            </div>
+            <h2 id="counter">Score: 0</h2>
+
+            <p id="blogContent"><br>
+                <strong>About</strong>
+                <p id="blogContent">
+                    So here is part 2 of me learning JavaScript but this time Flappy Bird was the game of choice. Try it out above
+                     and let me know what you think!
+                    <br><br>
+                    <strong>Controls</strong><br>
+                    Space to "flap", restart, and start.
+                </p>
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div id="footerHome">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-3">
+        				<p id="footerHead">Arthur Tran</p>
+        				<div id="showHide">
+        					<hr id="footerLine">
+        				</div>
+        			</div>
+
+        			<div class="col-sm-3">
+        				<h3 id="footerLinkHead">Links</h3>
+        				<div id="footerLinks">
+        					<a id="footLink" href="index.html">Home</a><br>
+        					<a id="footLink" href="games.html">Games</a><br>
+        					<a id="footLink" href="articles.html">Articles</a><br>
+        				</div>
+        				<br>
+        				<div id="showHide">
+        					<hr id="footerLine">
+        				</div>
+        			</div>
+
+        			<div class="col-sm-3">
+        				<h3 id="footerLinkHead">Contact</h3>
+        				<p id="footerLinks">tran.art13@gmail.com</p>
+        				<br>
+        				<div id="showHide">
+        					<hr id="footerLine">
+        				</div>
+        			</div>
+        			<div class="col-md-3">
+        				<a href="https://instagram.com/arthur_tran" target="_blank" style="text-decoration: none;">
+        					<img src="../images/ig.png" id="footerIcons">
+        				</a>&nbsp&nbsp
+        				<a href="https://twitter.com/" target="_blank" style="text-decoration: none;">
+        					<img src="../images/twitter.png" id="footerIcons">&nbsp&nbsp
+        				</a>
+        				<a href="https://www.youtube.com/channel/UCxjQ1tR8lkMkW-9C2XBiQLQ" target="_blank" style="text-decoration: none;">
+        					<img src="../images/youtube.png" id="footerIcons">&nbsp&nbsp
+        				</a>
+        				<a href="https://github.com/atran06" target="_blank" style="text-decoration: none;">
+        					<img src="../images/github.png" id="footerIcons">&nbsp&nbsp
+        				</a>
+        				<br>
+        				<div class="text-center">
+        					<a href="https://www.paypal.me/atran06">
+        						<button type="button" class="btn btn-outline-secondary btn-md" id="roundBtn">Donate</button>
+        					</a>
+        				</div>
+        			</div>
+        			<div id="showHide">
+        					<hr id="footerLine">
+        			</div>
+        		</div>
+        		<div class="text-center" style="color:white;">
+        			&copy;2018 Arthur Tran.
+        		</div>
+        	</div>
+        </div>
+    </body>
+
+    <script>
+        var canvas = document.getElementById("canvas");
+        var cover = document.getElementById("canvas-cover");
+        var scoreCount = document.getElementById("counter");
+        var g = canvas.getContext("2d");
+
+        var start;
+        var canScore = true;
+
+        let bird;
+
+        var x = 0;
+        var score = 0;
+
+        var cols = [];
+
+        var beforeTime = new Date().getTime();
+
+        function init() {
+            bird = new Bird();
+            start = false;
+        }
+
+        function render() {
+            g.clearRect(0, 0, canvas.width, canvas.height);
+
+            g.fillStyle = "rgb(51, 51, 51)";
+            g.fillRect(0, 0, canvas.width, canvas.height);
+
+            bird.draw();
+            for(var i = 0; i < cols.length; i++) {
+                cols[i].draw();
+            }
+        }
+
+        function update() {
+            if(start) {
+                if(new Date().getTime() - beforeTime > (1500 * Math.random()) + 1000) {
+                    cols.push(new Col());
+                    beforeTime = new Date().getTime();
+                }
+
+                bird.update();
+                for(var i = 0; i < cols.length; i++) {
+                    if(cols[i].x < 0 - cols[i].width) {
+                        cols.splice(i, 1);
+                        canScore = true;
+                    }
+                    if(bird.x + bird.radius > cols[i].x) {
+                        if(bird.x - bird.radius < cols[i].x + cols[i].width) {
+                            if(bird.y - bird.radius < cols[i].y1 + cols[i].height1) {
+                                bird.died = true;
+                            }
+                            if(bird.y + bird.radius > cols[i].y2) {
+                                bird.died = true;
+                            }
+                        }
+                        if(canScore) {
+                            score++;
+                            scoreCount.innerHTML = "Score: "+score+"";
+                            canScore = false;
+                        }
+                    }
+                    cols[i].update();
+                }
+                if(bird.died) {
+                    cover.innerHTML = "Game Over! <br>'space' to restart!";
+                    canScore = false;
+                }
+            }
+        }
+        requestAnimationFrame(gameLoop);
+
+        function gameLoop(timestamp) {
+            requestAnimationFrame(gameLoop);
+            render();
+            update();
+        }
+
+        function restart() {
+            start = false;
+            bird.died = false;
+            cols = [];
+            bird.y = canvas.height / 2;
+            cover.innerHTML = "Press 'space' to start!";
+            score = 0;
+            canScore = true;
+            scoreCount.innerHTML = "Score: 0";
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if(!bird.died) {
+                if(event.keyCode == 32) {
+                    if(!start) {
+                        start = true;
+                        cover.innerHTML = "";
+                    }
+                    bird.velY = -10;
+                    event.preventDefault();
+                }
+            } else {
+                if(event.keyCode == 32) {
+                    restart();
+                    event.preventDefault();
+                }
+            }
+        });
+
+        class Bird {
+            constructor() {
+                this.x = 60;
+                this.y = canvas.height / 2;
+                this.velY = 0;
+                this.gravity = .6;
+                this.radius = 8;
+                this.died = false;
+            }
+            draw() {
+                g.fillStyle = "white";
+                g.beginPath();
+                g.arc(this.x, this.y, 8, 0, 2*Math.PI);
+                g.fill();
+            }
+            update() {
+                this.velY += this.gravity;
+                this.y += this.velY;
+
+                if(this.y >= canvas.height - this.radius) {
+                    this.died = true;
+                    this.velY = -this.velY * .6;
+                    this.y = canvas.height - this.radius;
+                }
+                if(this.y <= this.radius) {
+                    this.died = true;
+                    this.y = this.radius;
+                    this.velY = -this.velY;
+                }
+            }
+        }
+
+        class Col {
+            constructor() {
+                this.x = canvas.width;
+                this.y1 = 0;
+                this.width = 50;
+                this.height1 = (((canvas.height - 220) - 50) * Math.random()) + 50;
+                this.distance = (Math.random() * 100) + 120;
+                this.y2 = this.height1 + this.distance;
+                this.height2 = canvas.height - this.y2;
+            }
+
+            draw() {
+                g.fillStyle = "red";
+                g.fillRect(this.x, this.y1, this.width, this.height1);
+                g.fillRect(this.x, this.y2, this.width, this.height2);
+            }
+
+            update() {
+                this.x -= 3;
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>

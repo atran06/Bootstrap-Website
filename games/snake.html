@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    	<link rel="stylesheet" type="text/css" href="../css/main.css">
+    	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
+    	<link rel="icon" type="image/png" href="../images/iconTab.png">
+    	<link rel="shortcut icon" type="image/png" href="../images/iconTab.png">
+    	<link rel="shortcut icon" href="../Images/iconTab.png" type="image/png">
+    	<link rel="icon" href="../Images/iconTab.png" type="image/png">
+
+        <title>Snake Game | Arthur Tran</title>
+
+        <style>
+            body {
+                text-align: center;
+            }
+            .containerGame {
+                padding: 0;
+                text-align: center;
+            }
+            .canvasContainer {
+                position: block;
+                margin: auto;
+                margin-top: 30px;
+                padding: auto;
+                width: 525px;
+            }
+            .numbersContainer {
+                height: auto;
+                margin-bottom: 90px;
+            }
+            #pt {
+                display: inline;
+                float: left;
+            }
+            #hs {
+                display: inline;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+    			<div class="container">
+    			<a href="../index.html"><img src="../images/icon.png" id="iconsNav"></a>
+    	  		<a class="navbar-brand" href="index.html">&nbsp&nbsp&nbspArthur Tran</a>
+    	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    	    		<span class="navbar-toggler-icon"></span>
+    	  		</button>
+
+    	  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    	    		<ul class="navbar-nav ml-auto">
+    	      			<li class="nav-item">
+    	        			<a class="nav-link" href="../index.html">Home</a>
+    	      			</li>
+    	      			<li class="nav-item active">
+    	        			<a class="nav-link" href="../games.html">Games</a>
+    	      			</li>
+    	      			<li class="nav-item">
+    	        			<a class="nav-link" href="../articles.html">Articles</a>
+    	      			</li>
+    	      			<li class="nav-item">
+    	        			<a class="nav-link" href="../music.html">Music</a>
+    	      			</li>
+    	      			<li class="nav-item">
+    	        			<a class="nav-link" href="../projects.html">Projects</a>
+    	      			</li>
+    	      			<li class="nav-item">
+    	        			<a class="nav-link" href="../index.html#aboutMe">About Me</a>
+    	      			</li>
+    	      			<li class="nav-item">
+    	        			<a class="nav-link" href="../contact.html">Contact</a>
+    	      			</li>
+    	    		</ul>
+    			</div>
+    		</div>
+    	</nav>
+
+        <div class="containerGame">
+            <h4 id="blogTitle">Snake Game</h4>
+            <p id="blogCap">
+                <img src="../images/calendar.png" id="icons">&nbsp&nbsp&nbspJuly 8, 2018&nbsp&nbsp&nbsp
+                <img src="../images/code.png" id="icons">&nbsp<img src="../images/pencil.png" id="icons">&nbsp&nbspArthur Tran
+            </p>
+            <div class="canvasContainer">
+                <canvas id="canvas" width="525" height="525"></canvas>
+                <div class="numbersContainer">
+                    <h2 id="pt">Points: 0</h2>
+                    <h2 id="hs">HighScore: 0</h2>
+                </div>
+            </div>
+            <!-- <form action="../php/snake.php" method="post">
+                <input type="text" name="score"/>
+                <input type="submit" value="submit"/>
+            </form> -->
+            <div class="container">
+                <p id="blogContent">
+					<strong>About</strong>
+					<p id="blogContent">
+						I was bored one day and decided to try to hone in my JavaScript skills by writting a game and what better game
+						than the classic Snake game. The game is played in browser so give it a shot above. My
+						high score is 57 so try to beat it!
+						<br><br>
+						<strong>Controls</strong><br>
+						Arrow keys to move.
+					</p>
+				</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footerHome">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-3">
+        				<p id="footerHead">Arthur Tran</p>
+        				<div id="showHide">
+        					<hr id="footerLine">
+        				</div>
+        			</div>
+
+        			<div class="col-sm-3">
+        				<h3 id="footerLinkHead">Links</h3>
+        				<div id="footerLinks">
+        					<a id="footLink" href="index.html">Home</a><br>
+        					<a id="footLink" href="games.html">Games</a><br>
+        					<a id="footLink" href="articles.html">Articles</a><br>
+        				</div>
+        				<br>
+        				<div id="showHide">
+        					<hr id="footerLine">
+        				</div>
+        			</div>
+
+        			<div class="col-sm-3">
+        				<h3 id="footerLinkHead">Contact</h3>
+        				<p id="footerLinks">tran.art13@gmail.com</p>
+        				<br>
+        				<div id="showHide">
+        					<hr id="footerLine">
+        				</div>
+        			</div>
+        			<div class="col-md-3">
+        				<a href="https://instagram.com/arthur_tran" target="_blank" style="text-decoration: none;">
+        					<img src="../images/ig.png" id="footerIcons">
+        				</a>&nbsp&nbsp
+        				<a href="https://twitter.com/" target="_blank" style="text-decoration: none;">
+        					<img src="../images/twitter.png" id="footerIcons">&nbsp&nbsp
+        				</a>
+        				<a href="https://www.youtube.com/channel/UCxjQ1tR8lkMkW-9C2XBiQLQ" target="_blank" style="text-decoration: none;">
+        					<img src="../images/youtube.png" id="footerIcons">&nbsp&nbsp
+        				</a>
+        				<a href="https://github.com/atran06" target="_blank" style="text-decoration: none;">
+        					<img src="../images/github.png" id="footerIcons">&nbsp&nbsp
+        				</a>
+        				<br>
+        				<div class="text-center">
+        					<a href="https://www.paypal.me/atran06">
+        						<button type="button" class="btn btn-outline-secondary btn-md" id="roundBtn">Donate</button>
+        					</a>
+        				</div>
+        			</div>
+        			<div id="showHide">
+        					<hr id="footerLine">
+        			</div>
+        		</div>
+        		<div class="text-center" style="color:white;">
+        			&copy;2018 Arthur Tran.
+        		</div>
+        	</div>
+        </div>
+    </body>
+
+    <script>
+        var p = document.getElementById("pt");
+        var h = document.getElementById("hs");
+        var canvas = document.getElementById("canvas");
+        var g = canvas.getContext("2d");
+
+        init();
+
+        var beforeTime = new Date().getTime();
+        var changeOnce = false;
+
+        let snake = new Snake();
+        let food = new Food();
+
+        var lastRender = 0;
+        var fps = 15;
+
+        function init() {
+            if(localStorage.getItem("snakeHS") == null) {
+                localStorage.setItem("snakeHS", 0);
+            } else {
+                h.innerHTML = "HighScore: "+localStorage.getItem("snakeHS")+"";
+            }
+        }
+
+        function gameLoop(timestamp) {
+            if(timestamp < lastRender + (1000 / fps)) {
+                requestAnimationFrame(gameLoop);
+                return;
+            }
+            lastRender = timestamp;
+
+            requestAnimationFrame(gameLoop);
+            draw();
+            update();
+        }
+        requestAnimationFrame(gameLoop);
+
+        document.addEventListener('keydown', function(event) {
+            if(event.keyCode == 37) {
+                snake.velX = -15; snake.velY = 0; //left
+                event.preventDefault();
+            }
+            if(event.keyCode == 39) {
+                snake.velX = 15; snake.velY = 0; //right
+                event.preventDefault();
+            }
+            if(event.keyCode == 38) {
+                snake.velY = -15; snake.velX = 0; //up
+                event.preventDefault();
+            }
+            if(event.keyCode == 40) {
+                snake.velY = 15; snake.velX = 0; //down
+                event.preventDefault();
+            }
+            if(event.keyCode == 32) {
+                restart(); //down
+            }
+        }, true);
+
+        function restart() {
+            if(snake.points > localStorage.getItem("snakeHS")) {
+                localStorage.setItem("snakeHS", snake.points);
+            }
+            fps = 15;
+            snake.points = 0;
+            snake.tail = [];
+            h.innerHTML = "HighScore: "+localStorage.getItem("snakeHS")+"";
+            p.innerHTML = "Points: "+snake.points+"";
+        }
+
+        function update() {
+            snake.died();
+            // if(new Date().getTime() - beforeTime >= 80) {
+                snake.update();
+                // beforeTime = new Date().getTime();
+            // }
+            if(snake.intersect(food)) {
+                snake.points++;
+
+                console.log(fps);
+                p.innerHTML = "Points: "+snake.points+"";
+
+                food.x = Math.floor(((34 * Math.random()) + 1)) * 15;
+                food.y = Math.floor(((34 * Math.random()) + 1)) * 15;
+                changeOnce = true;
+            }
+            if(snake.points % 5 == 0 && snake.points > 0 && changeOnce) {
+                fps += 2;
+                changeOnce = false;
+            }
+        }
+
+        function draw() {
+            g.clearRect(0, 0, canvas.width, canvas.height);
+            g.fillStyle = "rgb(51, 51, 51)"
+            g.fillRect(0, 0, canvas.width, canvas.height);
+            food.draw();
+            snake.draw();
+        }
+
+        function Snake() {
+            this.x = 0;
+            this.y = 0;
+            this.velX = 15;
+            this.velY = 0;
+            this.points = 0;
+            this.tail = [];
+
+            this.update = function() {
+                if(this.points == this.tail.length) {
+                    for(i = 0; i < this.points - 1; i++) {
+                        this.tail[i] = this.tail[i + 1];
+                    }
+                }
+                this.tail[this.points - 1] = new Point(this.x, this.y);
+
+                this.x += this.velX;
+                this.y += this.velY;
+
+                if(this.x >= canvas.width) this.x = 0;
+                if(this.x <= -15) this.x = canvas.width;
+                if(this.y >= canvas.height) this.y = 0;
+                if(this. y <= -15) this.y = canvas.height;
+
+            }
+
+            this.draw = function() {
+                g.fillStyle = "rgb(255, 255, 255)";
+                for(i = 0; i < this.tail.length; i++) {
+                    g.fillRect(this.tail[i].x, this.tail[i].y, 15, 15);
+                }
+
+                g.fillRect(this.x, this.y, 15, 15);
+            }
+
+            this.intersect = function(food) {
+                if(this.x == food.x && this.y == food.y) {
+                    return true;
+                }
+                return false;
+            }
+
+            this.died = function() {
+                for(i = 0; i < this.tail.length; i++) {
+                    if(this.x == this.tail[i].x && this.y == this.tail[i].y) {
+                        restart();
+                    }
+                }
+            }
+        }
+
+        function Food() {
+            this.x = Math.round(((35 * Math.random()) + 1)) * 15;
+            this.y = Math.round(((35 * Math.random()) + 1)) * 15;
+
+            this.draw = function() {
+                g.fillStyle = "rgb(255, 0, 0)";
+                g.fillRect(this.x, this.y, 15, 15);
+            }
+        }
+
+        function Point(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>
